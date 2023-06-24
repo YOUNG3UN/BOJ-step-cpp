@@ -1,7 +1,8 @@
 #include<iostream>
+
 using namespace std;
-int main()
-{
+
+int main() {
     //1. 상대오차가 10^-9 이하 -> 소수점을 9자리수 이상 받을 수 있는 데이터타입 지정
     //float은 소수점 이하 6자리까지, double은 소수점 이하 15자리까지
     double A, B;

@@ -1,18 +1,27 @@
 #include<iostream>
+
 using namespace std;
-int main()
-{
-    int y;
 
-    cin >> y;
+int main() {
+    int A, B, C, hour, min;
 
-    if (y % 4 == 0)
-    {
-        if (y % 100 != 0 || y % 400 == 0)
-            cout << 1;
-        else cout << 0;
+    cin >> A >> B >> C;
+
+    hour = C / 60;
+    min = C % 60;
+
+    A += hour;
+    B += min;
+
+    if (B > 59) {
+        A++;
+        B -= 60;
     }
-    else cout << 0;
 
+    if (A > 23) {
+        A -= 24;
+    }
+
+    cout << A << ' ' << B;
     return 0;
 }

@@ -1,18 +1,17 @@
 #include<iostream>
+
 using namespace std;
-int main()
-{
-	int y;
 
-	cin >> y;
+int main() {
+    int y;
 
-	if (y % 4 == 0)
-	{
-		if (y % 100 != 0 || y % 400 == 0)
-			cout << 1;
-		else cout << 0;
-	}
-	else cout << 0;
+    cin >> y;
 
-	return 0;
+    if (y % 4 == 0) {
+        if (y % 100 != 0 || y % 400 == 0)
+            cout << 1;
+        else cout << 0;
+    } else cout << 0;
+
+    return 0;
 }

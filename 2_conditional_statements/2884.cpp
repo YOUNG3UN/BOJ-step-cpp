@@ -1,24 +1,22 @@
 #include<iostream>
+
 using namespace std;
-int main()
-{
-	int h, m;
 
-	cin >> h >> m;
+int main() {
+    int h, m;
 
-	if (m >= 45)
-	{
-		m = m - 45;
-	}
-	else
-	{
-		if (h == 0) h = 23;
-		else h--;
+    cin >> h >> m;
 
-		m = m + 15;
-	}
+    if (m >= 45) {
+        m = m - 45;
+    } else {
+        if (h == 0) h = 23;
+        else h--;
 
-	cout << h << " " << m;
+        m = m + 15;
+    }
 
-	return 0;
+    cout << h << " " << m;
+
+    return 0;
 }
