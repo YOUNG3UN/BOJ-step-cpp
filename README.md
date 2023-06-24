@@ -1,3 +1,3 @@
-# BOJ_cpp
+# BOJ-step-by-step-cpp
 
-백준 C++ 문제풀이
+[백준 단계별로 풀어보기](https://www.acmicpc.net/step) C++
