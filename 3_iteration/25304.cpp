@@ -13,7 +13,7 @@ int main() {
         result += price * count;
     }
 
-    if(result != X)
+    if (result != X)
         cout << "No";
     else
         cout << "Yes";

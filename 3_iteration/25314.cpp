@@ -3,20 +3,15 @@
 using namespace std;
 
 int main() {
-    int X, N, result = 0;
+    int N;
 
-    cin >> X >> N;
+    cin >> N;
 
-    while (N--) {
-        int price, count;
-        cin >> price >> count;
-        result += price * count;
-    }
+    do {
+        cout << "long ";
+    } while (N -= 4);
 
-    if(result != X)
-        cout << "No";
-    else
-        cout << "Yes";
+    cout << "int";
 
     return 0;
 }

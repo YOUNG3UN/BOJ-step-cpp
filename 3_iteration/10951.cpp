@@ -1,22 +1,15 @@
 #include<iostream>
+
 using namespace std;
-int main()
-{
-	int A, B;
 
-	while (1)
-	{
-		cin >> A >> B;
-		if (cin.eof() == true) break;
-		cout << A + B << endl;
-	}
+int main() {
+    int A, B;
 
-	/*
-	while (cin >> a >> b)
-	{
-		cout << a + b << endl;
-	}
-	*/
+    while (1) {
+        cin >> A >> B;
+        if (cin.eof() == true) break;
+        cout << A + B << "\n";
+    }
 
-	return 0;
+    return 0;
 }
