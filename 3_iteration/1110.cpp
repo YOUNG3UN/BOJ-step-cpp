@@ -1,22 +1,22 @@
 #include<iostream>
+
 using namespace std;
-int main()
-{
-	int N, ans = 0;
 
-	cin >> N;
+int main() {
+    int N, ans = 0;
 
-	int temp;
-	temp = N;
+    cin >> N;
 
-	while (1)
-	{
-		temp = (temp % 10) * 10 + (((temp / 10) + (temp % 10)) % 10);
-		ans++;
-		if (temp == N) break;
-	}
+    int temp;
+    temp = N;
 
-	cout << ans;
+    while (1) {
+        temp = (temp % 10) * 10 + (((temp / 10) + (temp % 10)) % 10);
+        ans++;
+        if (temp == N) break;
+    }
 
-	return 0;
+    cout << ans;
+
+    return 0;
 }
