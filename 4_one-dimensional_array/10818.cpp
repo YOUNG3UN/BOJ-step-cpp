@@ -1,23 +1,24 @@
 #include<iostream>
+#include<vector>
 #include<algorithm>
+
 using namespace std;
-int main()
-{
-	int N;
-	cin >> N;
 
-	int* arr = new int[N];
+int main() {
+    int N;
+    cin >> N;
 
-	for (int i = 0; i < N; i++)
-	{
-		cin >> arr[i];
-	}
+    vector<int> ans;
 
-	sort(arr, arr + N);
+    for (int i = 0; i < N; i++) {
+        int num;
+        cin >> num;
+        ans.push_back(num);
+    }
 
-	cout << arr[0] << " " << arr[N-1];
+    sort(ans.begin(), ans.end());
 
-	delete[] arr;
+    cout << ans.front() << " " << ans.back();
 
-	return 0;
+    return 0;
 }

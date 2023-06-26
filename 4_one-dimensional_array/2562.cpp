@@ -2,25 +2,17 @@
 using namespace std;
 int main()
 {
-	int arr[9];
+    int num, max_num=0, order;
 
 	for (int i = 0; i < 9; i++)
 	{
-		cin >> arr[i];
+		cin >> num;
+        max_num = max(num, max_num);
+        if(num == max_num)
+            order = i+1;
 	}
 
-	int max = 0, n;
-	for (int i = 0; i < 9; i++)
-	{
-		if (max < arr[i])
-		{
-			max = arr[i];
-			n = i+1;
-		}
-	}
-
-	cout << max << endl;
-	cout << n;
+    cout << max_num << "\n" << order;
 
 	return 0;
 }
