@@ -1,32 +1,30 @@
 #include<iostream>
-#include<algorithm>
+#include<vector>
+
 using namespace std;
-int main()
-{
-	int N;
-	cin >> N;
 
-	double* arr = new double[N];
-	for (int i = 0; i < N; i++)
-	{
-		cin >> arr[i];
-	}
+int main() {
+    int N;
+    double avg, sum = 0, max_num = 0;
+    vector<double> v;
 
-	sort(arr, arr + N);
-	double max = arr[N - 1];
-	double sum = 0;
+    cin >> N;
 
-	for (int i = 0; i < N; i++)
-	{
-		arr[i] = arr[i] / max * 100;
-		sum += arr[i];
-	}
+    for (int i = 0; i < N; i++) {
+        double num;
+        cin >> num;
+        v.push_back(num);
+        max_num = max(max_num, num);
+    }
 
-	double avg = sum / (double)N;
+    for (int i = 0; i < N; i++) {
+        v[i] = v[i] / max_num * 100;
+        sum += v[i];
+    }
 
-	cout << avg;
+    avg = sum / N;
 
-	delete[] arr;
+    cout << avg;
 
-	return 0;
+    return 0;
 }

@@ -4,23 +4,18 @@
 using namespace std;
 
 int main() {
-    int N, M, i, j;
 
-    cin >> N >> M;
+    vector<bool> student(30, false);
 
-    vector<int> ans;
-
-    for (int a = 1; a <= N; a++) {
-        ans.push_back(a);
+    for (int i = 0; i < 28; i++) {
+        int num;
+        cin >> num;
+        student[num - 1] = true;
     }
 
-    for (int a = 0; a < M; a++) {
-        cin >> i >> j;
-        swap(ans[i - 1], ans[j - 1]);
-    }
-
-    for (int a = 0; a < N; a++) {
-        cout << ans[a] << " ";
+    for (int i = 0; i < 30; i++) {
+        if (student[i] == false)
+            cout << i + 1 << '\n';
     }
 
     return 0;
