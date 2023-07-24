@@ -1,26 +1,25 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
-int main()
-{
-	string s;
-	getline(cin, s);	// 띄어쓰기가 포함된 문자열을 받을 때는 getline
+int main() {
+    string s;
+    getline(cin, s);    // 띄어쓰기가 포함된 문자열을 받을 때는 getline
 
-	int ans = 1;
-	for (int i = 0; i < s.length(); i++)
-	{
-		if (s[i] == ' ')
-			ans++;
-	}
+    int ans = 1;
+    for (int i = 0; i < s.length(); i++) {
+        if (s[i] == ' ')
+            ans++;
+    }
 
-	if (s[0] == ' ')
-		ans--;
-		
-	if(s[s.length() - 1] == ' ')
-		ans--;
+    if (s[0] == ' ')
+        ans--;
 
-	cout << ans;
+    if (s[s.length() - 1] == ' ')
+        ans--;
 
-	return 0;
+    cout << ans;
+
+    return 0;
 }

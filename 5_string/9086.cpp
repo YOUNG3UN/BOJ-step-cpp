@@ -7,12 +7,12 @@ int main() {
     int T;
     string S;
 
-    while(T--){
-        cin >> S;
-        S.back()+S.begin();
-    }
+    cin >> T;
 
-    cout << S.length();
+    while (T--) {
+        cin >> S;
+        cout << S.front() << S.back() << '\n';
+    }
 
     return 0;
 }
